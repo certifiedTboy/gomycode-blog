@@ -13,7 +13,9 @@ app.use(express.json());
 app.use(cookieParser());
 
 //global middleware configuration for cors
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(
+  cors({ origin: "https://gomycode-blog-gamma.vercel.app", credentials: true })
+);
 
 // router configuration as a global middleware
 app.use("/users", userRouter);
